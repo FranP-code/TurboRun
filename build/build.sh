@@ -5,6 +5,9 @@ elif [ "$1" = "linux" ]; then
   cd /usr/src
   rustup target add x86_64-unknown-linux-gnu
   cargo build --release --target=x86_64-unknown-linux-gnu
+elif [ "$1" = "linux-arm" ]; then
+  rustup target add aarch64-unknown-linux-gnu
+  cargo build --release --target=stable-aarch64-unknown-linux-gnu
 elif [ "$1" = "windows" ]; then
   cd /usr/src
   rustup target add x86_64-pc-windows-gnu 
